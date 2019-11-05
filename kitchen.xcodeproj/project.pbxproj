@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E982554423720D1200E94770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982554323720D1200E94770 /* AppDelegate.swift */; };
-		E982554623720D1200E94770 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982554523720D1200E94770 /* ContentView.swift */; };
+		E982554623720D1200E94770 /* RecetteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982554523720D1200E94770 /* RecetteDetail.swift */; };
 		E982554823720D1800E94770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E982554723720D1800E94770 /* Assets.xcassets */; };
 		E982554B23720D1800E94770 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E982554A23720D1800E94770 /* Preview Assets.xcassets */; };
 		E982554E23720D1800E94770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E982554C23720D1800E94770 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,14 @@
 		E9825573237212D600E94770 /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9825572237212D600E94770 /* turtlerock.jpg */; };
 		E98255752372138B00E94770 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98255742372138B00E94770 /* CircleImage.swift */; };
 		E982557B237219AD00E94770 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557A237219AD00E94770 /* MapView.swift */; };
+		E982557E2372236400E94770 /* Recette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557D2372236400E94770 /* Recette.swift */; };
+		E98255802372262A00E94770 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557F2372262A00E94770 /* Data.swift */; };
+		E98255822372268C00E94770 /* recettes.json in Resources */ = {isa = PBXBuildFile; fileRef = E98255812372268C00E94770 /* recettes.json */; };
+		E98255842372298E00E94770 /* LigneRecette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98255832372298E00E94770 /* LigneRecette.swift */; };
+		E982558823722A9900E94770 /* carbonade-flamande.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558523722A9800E94770 /* carbonade-flamande.jpg */; };
+		E982558923722A9900E94770 /* boeuf-bourguinon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558623722A9800E94770 /* boeuf-bourguinon.jpg */; };
+		E982558A23722A9900E94770 /* steak-frites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558723722A9800E94770 /* steak-frites.jpg */; };
+		E982558C23722C0F00E94770 /* ListeRecette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982558B23722C0F00E94770 /* ListeRecette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,7 @@
 /* Begin PBXFileReference section */
 		E982554023720D1200E94770 /* kitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E982554323720D1200E94770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E982554523720D1200E94770 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E982554523720D1200E94770 /* RecetteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetteDetail.swift; sourceTree = "<group>"; };
 		E982554723720D1800E94770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E982554A23720D1800E94770 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E982554D23720D1800E94770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +61,14 @@
 		E9825572237212D600E94770 /* turtlerock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = turtlerock.jpg; sourceTree = "<group>"; };
 		E98255742372138B00E94770 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		E982557A237219AD00E94770 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E982557D2372236400E94770 /* Recette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recette.swift; sourceTree = "<group>"; };
+		E982557F2372262A00E94770 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		E98255812372268C00E94770 /* recettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recettes.json; sourceTree = "<group>"; };
+		E98255832372298E00E94770 /* LigneRecette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LigneRecette.swift; sourceTree = "<group>"; };
+		E982558523722A9800E94770 /* carbonade-flamande.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "carbonade-flamande.jpg"; sourceTree = "<group>"; };
+		E982558623722A9800E94770 /* boeuf-bourguinon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boeuf-bourguinon.jpg"; sourceTree = "<group>"; };
+		E982558723722A9800E94770 /* steak-frites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steak-frites.jpg"; sourceTree = "<group>"; };
+		E982558B23722C0F00E94770 /* ListeRecette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeRecette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +120,17 @@
 		E982554223720D1200E94770 /* kitchen */ = {
 			isa = PBXGroup;
 			children = (
+				E982557C2372234200E94770 /* Models */,
 				E982554323720D1200E94770 /* AppDelegate.swift */,
-				E982554523720D1200E94770 /* ContentView.swift */,
+				E982554523720D1200E94770 /* RecetteDetail.swift */,
 				E982554723720D1800E94770 /* Assets.xcassets */,
 				E982554C23720D1800E94770 /* LaunchScreen.storyboard */,
 				E982554F23720D1800E94770 /* Info.plist */,
 				E982554923720D1800E94770 /* Preview Content */,
 				E98255742372138B00E94770 /* CircleImage.swift */,
 				E982557A237219AD00E94770 /* MapView.swift */,
+				E98255832372298E00E94770 /* LigneRecette.swift */,
+				E982558B23722C0F00E94770 /* ListeRecette.swift */,
 			);
 			path = kitchen;
 			sourceTree = "<group>";
@@ -145,9 +164,22 @@
 		E9825571237211FE00E94770 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				E982558623722A9800E94770 /* boeuf-bourguinon.jpg */,
+				E982558523722A9800E94770 /* carbonade-flamande.jpg */,
+				E982558723722A9800E94770 /* steak-frites.jpg */,
 				E9825572237212D600E94770 /* turtlerock.jpg */,
+				E98255812372268C00E94770 /* recettes.json */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		E982557C2372234200E94770 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E982557D2372236400E94770 /* Recette.swift */,
+				E982557F2372262A00E94770 /* Data.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9825573237212D600E94770 /* turtlerock.jpg in Resources */,
+				E982558A23722A9900E94770 /* steak-frites.jpg in Resources */,
 				E982554E23720D1800E94770 /* LaunchScreen.storyboard in Resources */,
 				E982554B23720D1800E94770 /* Preview Assets.xcassets in Resources */,
+				E98255822372268C00E94770 /* recettes.json in Resources */,
 				E982554823720D1800E94770 /* Assets.xcassets in Resources */,
+				E982558923722A9900E94770 /* boeuf-bourguinon.jpg in Resources */,
+				E982558823722A9900E94770 /* carbonade-flamande.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,10 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E982554623720D1200E94770 /* ContentView.swift in Sources */,
+				E98255842372298E00E94770 /* LigneRecette.swift in Sources */,
+				E982554623720D1200E94770 /* RecetteDetail.swift in Sources */,
+				E982558C23722C0F00E94770 /* ListeRecette.swift in Sources */,
+				E98255802372262A00E94770 /* Data.swift in Sources */,
 				E982557B237219AD00E94770 /* MapView.swift in Sources */,
 				E982554423720D1200E94770 /* AppDelegate.swift in Sources */,
 				E98255752372138B00E94770 /* CircleImage.swift in Sources */,
+				E982557E2372236400E94770 /* Recette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

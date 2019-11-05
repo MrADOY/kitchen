@@ -1,0 +1,22 @@
+
+
+[
+    {
+        "name": "Steak frites",
+        "category": "Featured",
+        "id": 1001,
+        "imageName": "steak-frites"
+    },
+    {
+        "name": "Boeuf bourguignon",
+        "category": "Featured",
+        "id": 1002,
+        "imageName": "boeuf-bourguinon"
+    },
+    {
+        "name": "Carbonade Flamande",
+        "category": "Featured",
+        "id": 1003,
+        "imageName": "carbonade-flamande"
+    },
+]
