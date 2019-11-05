@@ -14,6 +14,9 @@
 		E982554E23720D1800E94770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E982554C23720D1800E94770 /* LaunchScreen.storyboard */; };
 		E982555923720D1800E94770 /* kitchenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982555823720D1800E94770 /* kitchenTests.swift */; };
 		E982556423720D1800E94770 /* kitchenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982556323720D1800E94770 /* kitchenUITests.swift */; };
+		E9825573237212D600E94770 /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9825572237212D600E94770 /* turtlerock.jpg */; };
+		E98255752372138B00E94770 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98255742372138B00E94770 /* CircleImage.swift */; };
+		E982557B237219AD00E94770 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557A237219AD00E94770 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		E982555F23720D1800E94770 /* kitchenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kitchenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E982556323720D1800E94770 /* kitchenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kitchenUITests.swift; sourceTree = "<group>"; };
 		E982556523720D1800E94770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9825572237212D600E94770 /* turtlerock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = turtlerock.jpg; sourceTree = "<group>"; };
+		E98255742372138B00E94770 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		E982557A237219AD00E94770 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		E982553723720D1200E94770 = {
 			isa = PBXGroup;
 			children = (
+				E9825571237211FE00E94770 /* Ressources */,
 				E982554223720D1200E94770 /* kitchen */,
 				E982555723720D1800E94770 /* kitchenTests */,
 				E982556223720D1800E94770 /* kitchenUITests */,
@@ -103,6 +110,8 @@
 				E982554C23720D1800E94770 /* LaunchScreen.storyboard */,
 				E982554F23720D1800E94770 /* Info.plist */,
 				E982554923720D1800E94770 /* Preview Content */,
+				E98255742372138B00E94770 /* CircleImage.swift */,
+				E982557A237219AD00E94770 /* MapView.swift */,
 			);
 			path = kitchen;
 			sourceTree = "<group>";
@@ -131,6 +140,14 @@
 				E982556523720D1800E94770 /* Info.plist */,
 			);
 			path = kitchenUITests;
+			sourceTree = "<group>";
+		};
+		E9825571237211FE00E94770 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				E9825572237212D600E94770 /* turtlerock.jpg */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9825573237212D600E94770 /* turtlerock.jpg in Resources */,
 				E982554E23720D1800E94770 /* LaunchScreen.storyboard in Resources */,
 				E982554B23720D1800E94770 /* Preview Assets.xcassets in Resources */,
 				E982554823720D1800E94770 /* Assets.xcassets in Resources */,
@@ -264,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E982554623720D1200E94770 /* ContentView.swift in Sources */,
+				E982557B237219AD00E94770 /* MapView.swift in Sources */,
 				E982554423720D1200E94770 /* AppDelegate.swift in Sources */,
+				E98255752372138B00E94770 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

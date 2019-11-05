@@ -23,6 +23,9 @@
       "idiom" : "tv",
       "filename" : "Top Shelf Image.imageset",
       "role" : "top-shelf-image"
+    },
+    {
+      "filename" : "turtlerock.imageset"
     }
   ],
   "info" : {
