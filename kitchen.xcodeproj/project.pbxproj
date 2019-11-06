@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E94EC39723736D4400F64D82 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94EC39623736D4400F64D82 /* UserData.swift */; };
 		E982554423720D1200E94770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982554323720D1200E94770 /* AppDelegate.swift */; };
 		E982554623720D1200E94770 /* RecetteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982554523720D1200E94770 /* RecetteDetail.swift */; };
 		E982554823720D1800E94770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E982554723720D1800E94770 /* Assets.xcassets */; };
@@ -16,7 +17,6 @@
 		E982556423720D1800E94770 /* kitchenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982556323720D1800E94770 /* kitchenUITests.swift */; };
 		E9825573237212D600E94770 /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9825572237212D600E94770 /* turtlerock.jpg */; };
 		E98255752372138B00E94770 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98255742372138B00E94770 /* CircleImage.swift */; };
-		E982557B237219AD00E94770 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557A237219AD00E94770 /* MapView.swift */; };
 		E982557E2372236400E94770 /* Recette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557D2372236400E94770 /* Recette.swift */; };
 		E98255802372262A00E94770 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557F2372262A00E94770 /* Data.swift */; };
 		E98255822372268C00E94770 /* recettes.json in Resources */ = {isa = PBXBuildFile; fileRef = E98255812372268C00E94770 /* recettes.json */; };
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E94EC39623736D4400F64D82 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		E982554023720D1200E94770 /* kitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E982554323720D1200E94770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E982554523720D1200E94770 /* RecetteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetteDetail.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		E982556523720D1800E94770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9825572237212D600E94770 /* turtlerock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = turtlerock.jpg; sourceTree = "<group>"; };
 		E98255742372138B00E94770 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
-		E982557A237219AD00E94770 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E982557D2372236400E94770 /* Recette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recette.swift; sourceTree = "<group>"; };
 		E982557F2372262A00E94770 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E98255812372268C00E94770 /* recettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recettes.json; sourceTree = "<group>"; };
@@ -128,9 +128,9 @@
 				E982554F23720D1800E94770 /* Info.plist */,
 				E982554923720D1800E94770 /* Preview Content */,
 				E98255742372138B00E94770 /* CircleImage.swift */,
-				E982557A237219AD00E94770 /* MapView.swift */,
 				E98255832372298E00E94770 /* LigneRecette.swift */,
 				E982558B23722C0F00E94770 /* ListeRecette.swift */,
+				E94EC39623736D4400F64D82 /* UserData.swift */,
 			);
 			path = kitchen;
 			sourceTree = "<group>";
@@ -320,8 +320,8 @@
 				E98255842372298E00E94770 /* LigneRecette.swift in Sources */,
 				E982554623720D1200E94770 /* RecetteDetail.swift in Sources */,
 				E982558C23722C0F00E94770 /* ListeRecette.swift in Sources */,
+				E94EC39723736D4400F64D82 /* UserData.swift in Sources */,
 				E98255802372262A00E94770 /* Data.swift in Sources */,
-				E982557B237219AD00E94770 /* MapView.swift in Sources */,
 				E982554423720D1200E94770 /* AppDelegate.swift in Sources */,
 				E98255752372138B00E94770 /* CircleImage.swift in Sources */,
 				E982557E2372236400E94770 /* Recette.swift in Sources */,

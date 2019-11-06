@@ -13,7 +13,7 @@ struct Recette: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var imageName: String
-
+    var isFavorite: Bool
     enum Category: String, CaseIterable, Codable, Hashable {
         case featured = "Featured"
         case lakes = "Lakes"

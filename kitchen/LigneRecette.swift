@@ -16,6 +16,12 @@ struct LigneRecette: View {
             .frame(width: 200, height: 150 )
             
             Text(recette.name)
+                        
+            if recette.isFavorite {
+                Image(systemName: "star.fill")
+                    .imageScale(.medium)
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }

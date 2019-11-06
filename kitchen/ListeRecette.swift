@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct ListeRecette: View {
+    
+    @EnvironmentObject var userData: UserData
+    
     var body: some View {
         NavigationView {
-            List(recetteData) { recette in
-                NavigationLink(destination: RecetteDetail(recette : recette)) {
-                    LigneRecette(recette: recette)
+            List {
+                Toggle(isOn: $userData.showFavoritesOnly) {
+                    Text("Favorites only")
+                }
+
+                ForEach(userData.recettes) { recette in
+                    if !self.userData.showFavoritesOnly || recette.isFavorite {
+                        NavigationLink(destination: RecetteDetail(recette : recette)) {
+                            LigneRecette(recette: recette)
+                        }
+                    }
                 }
             }
             .navigationBarTitle(Text("Recettes"))

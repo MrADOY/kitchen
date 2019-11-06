@@ -10,22 +10,37 @@ import MapKit
 
 struct RecetteDetail: View {
     
+    @EnvironmentObject var userData: UserData
     var recette: Recette
+    
+    
+    var recetteIndex: Int {
+        userData.recettes.firstIndex(where: { $0.id == recette.id })!
+    }
     
     var body: some View {
         VStack {
-            MapView(coordinate : CLLocationCoordinate2D(
-            latitude: 34.011286, longitude: -116.166868))
-                .frame(height: 300)
-                .edgesIgnoringSafeArea(.top)
             
             CircleImage(image : recette.image)
             .offset(y: -130)
             .padding(.bottom, -130)
 
             VStack(alignment: .leading) {
-                Text(recette.name)
-                    .font(.title)
+                HStack {
+                    Text(recette.name)
+                        .font(.title)
+                    Button(action: {
+                        self.userData.recettes[self.recetteIndex].isFavorite.toggle()
+                    }) {
+                        if self.userData.recettes[self.recetteIndex].isFavorite {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(Color.yellow)
+                        } else {
+                            Image(systemName: "star")
+                                .foregroundColor(Color.gray)
+                        }
+                    }
+                }
                 HStack(alignment: .top) {
                     Text("Joshua Tree National Park")
                         .font(.subheadline)
@@ -42,5 +57,6 @@ struct RecetteDetail: View {
 struct RecetteDetail_Preview: PreviewProvider {
     static var previews: some View {
         RecetteDetail(recette : recetteData[0])
+         .environmentObject(UserData())
     }
 }
