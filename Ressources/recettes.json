@@ -3,23 +3,56 @@
 [
     {
         "name": "Steak frites",
-        "category": "Featured",
         "id": 1001,
         "imageName": "steak-frites",
-        "isFavorite" : false
+        "isFavorite" : false,
+        "avis" : 4,
+        "categorie" : "Tendance",
+        "enVedette" : false
     },
     {
         "name": "Boeuf bourguignon",
-        "category": "Featured",
         "id": 1002,
         "imageName": "boeuf-bourguinon",
-        "isFavorite" : true
+        "isFavorite" : true,
+        "avis" : 1,
+        "categorie" : "Populaire",
+        "enVedette" : true
     },
     {
         "name": "Carbonade Flamande",
-        "category": "Featured",
         "id": 1003,
         "imageName": "carbonade-flamande",
-        "isFavorite" : false
+        "isFavorite" : false,
+        "avis" : 5,
+        "categorie" : "Populaire",
+        "enVedette" : false
+    },
+    {
+        "name": "Maki",
+        "id": 1004,
+        "imageName": "makisushi",
+        "isFavorite" : false,
+        "avis" : 4,
+        "categorie" : "Tendance",
+        "enVedette" : false
+    },
+    {
+        "name": "Welsh",
+        "id": 1005,
+        "imageName": "welsh-rarebit",
+        "isFavorite" : false,
+        "avis" : 5,
+        "categorie" : "Populaire",
+        "enVedette" : false
+    },
+    {
+        "name": "Riz cantonais",
+        "id": 1006,
+        "imageName": "riz-cantonais",
+        "isFavorite" : false,
+        "avis" : 5,
+        "categorie" : "Populaire",
+        "enVedette" : false
     },
 ]

@@ -7,7 +7,6 @@
 
 import SwiftUI
 import MapKit
-
 struct RecetteDetail: View {
     
     @EnvironmentObject var userData: UserData
@@ -19,37 +18,54 @@ struct RecetteDetail: View {
     }
     
     var body: some View {
-        VStack {
-            
-            CircleImage(image : recette.image)
-            .offset(y: -130)
-            .padding(.bottom, -130)
-
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(recette.name)
-                        .font(.title)
-                    Button(action: {
-                        self.userData.recettes[self.recetteIndex].isFavorite.toggle()
-                    }) {
-                        if self.userData.recettes[self.recetteIndex].isFavorite {
-                            Image(systemName: "star.fill")
-                                .foregroundColor(Color.yellow)
-                        } else {
-                            Image(systemName: "star")
-                                .foregroundColor(Color.gray)
-                        }
+        
+        VStack(alignment: .leading){
+            HStack(alignment: .top){
+                CircleImage(image : recette.image)
+                    .offset(y: -130)
+                
+                
+                Text(recette.name)
+                    .font(.headline)
+                    
+                    
+                    
+                Button(action: {
+                    self.userData.recettes[self.recetteIndex].isFavorite.toggle()
+                }) {
+                    if self.userData.recettes[self.recetteIndex].isFavorite {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(Color.yellow)
+                    } else {
+                        Image(systemName: "star")
+                            .foregroundColor(Color.gray)
                     }
+                    
                 }
-                HStack(alignment: .top) {
-                    Text("Joshua Tree National Park")
-                        .font(.subheadline)
-                    Text("California")
-                        .font(.subheadline)
-                }
+                
+            }.frame(height : 200)
+            HStack{
+            PieChartView(data : [
+                DataCharts(num :56, categorie: "Lipides", color: Color.red),
+                DataCharts(num :34, categorie: "Protéines", color: Color.blue),
+                DataCharts(num :128, categorie: "Glucides", color: Color.green)
+            ], title: "Macronutriment", legend: "Legend")
+                RecettesInstructions()
             }
-            .padding()
-            Spacer()
+        }.frame(width : 1920, height : 1920)
+        
+        
+    }
+}
+
+struct RecettesInstructions: View {
+    
+    var body: some View {
+        VStack(spacing: 1.0){
+        Text("Etape 1 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        Text("Etape 2 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        Text("Etape 3 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        Text("Etape 4 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
         }
     }
 }
@@ -57,6 +73,6 @@ struct RecetteDetail: View {
 struct RecetteDetail_Preview: PreviewProvider {
     static var previews: some View {
         RecetteDetail(recette : recetteData[0])
-         .environmentObject(UserData())
+            .environmentObject(UserData())
     }
 }

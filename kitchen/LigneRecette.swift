@@ -14,18 +14,39 @@ struct LigneRecette: View {
             recette.image
             .resizable()
             .frame(width: 200, height: 150 )
+            .overlay(
+                Rectangle().stroke(Color.white, lineWidth: 5))
+            .shadow(radius: 10)
             
-            Text(recette.name)
-                        
-            if recette.isFavorite {
-                Image(systemName: "star.fill")
-                    .imageScale(.medium)
-                    .foregroundColor(.yellow)
+            VStack {
+                HStack{
+                    Text(recette.name)
+                    if recette.isFavorite {
+                        Image(systemName: "star.fill")
+                            .imageScale(.medium)
+                            .foregroundColor(.yellow)
+                    }
+                }
+                HStack{
+                    Text("Durée 20 min")
+                        .font(.caption)
+                        .fontWeight(.light)
+                    Text("Notes")
+                        .font(.caption)
+                        .fontWeight(.light)
+                    HStack(spacing: -1.0) {
+                            ForEach(0 ..< recette.avis) { _ in
+                                Image(systemName: "star.fill")
+                                    .padding(.leading)
+                                    .imageScale(.small)
+                                    .foregroundColor(.yellow)
+                            }
+                        }
+                    }
+                }
             }
         }
     }
-}
-
 struct LigneRecette_Previews: PreviewProvider {
     static var previews: some View {
         
