@@ -35,7 +35,6 @@
 		E982558823722A9900E94770 /* carbonade-flamande.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558523722A9800E94770 /* carbonade-flamande.jpg */; };
 		E982558923722A9900E94770 /* boeuf-bourguinon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558623722A9800E94770 /* boeuf-bourguinon.jpg */; };
 		E982558A23722A9900E94770 /* steak-frites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558723722A9800E94770 /* steak-frites.jpg */; };
-		E982558C23722C0F00E94770 /* ListeRecette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982558B23722C0F00E94770 /* ListeRecette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +89,6 @@
 		E982558523722A9800E94770 /* carbonade-flamande.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "carbonade-flamande.jpg"; sourceTree = "<group>"; };
 		E982558623722A9800E94770 /* boeuf-bourguinon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boeuf-bourguinon.jpg"; sourceTree = "<group>"; };
 		E982558723722A9800E94770 /* steak-frites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steak-frites.jpg"; sourceTree = "<group>"; };
-		E982558B23722C0F00E94770 /* ListeRecette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeRecette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +162,6 @@
 				E982554923720D1800E94770 /* Preview Content */,
 				E98255742372138B00E94770 /* CircleImage.swift */,
 				E98255832372298E00E94770 /* LigneRecette.swift */,
-				E982558B23722C0F00E94770 /* ListeRecette.swift */,
 				E94EC39623736D4400F64D82 /* UserData.swift */,
 				E93A6398237464C5008270DD /* HomeCategorie.swift */,
 				E93A639A2374681D008270DD /* LigneCategorie.swift */,
@@ -370,7 +367,6 @@
 				E95F2CBD23CB8FD900D3F87D /* AVPlayerView.swift in Sources */,
 				E93A6399237464C5008270DD /* HomeCategorie.swift in Sources */,
 				E982554623720D1200E94770 /* RecetteDetail.swift in Sources */,
-				E982558C23722C0F00E94770 /* ListeRecette.swift in Sources */,
 				E94EC39723736D4400F64D82 /* UserData.swift in Sources */,
 				E954826923756AE50030DCBB /* PieChartCell.swift in Sources */,
 				E954826823756AE50030DCBB /* PieChartRow.swift in Sources */,

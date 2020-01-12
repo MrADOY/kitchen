@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct HomeCategorie: View {
+        
+    @EnvironmentObject var userData: UserData
     
     var categories: [String: [Recette]] {
         Dictionary(
             grouping: recetteData,
             by: { $0.categorie.rawValue }
         )
-    }
-    
-    var enVedettes: [Recette] {
-        recetteData.filter { $0.enVedette }
     }
     
     var body: some View {
@@ -28,17 +26,10 @@ struct HomeCategorie: View {
                 }
                 .listRowInsets(EdgeInsets())
                 
-                LigneCategorie(nomCategorie: "Favori", items: recetteData)
+                LigneCategorie(nomCategorie: "Favori", items: self.userData.recettes.filter { $0.isFavorite})
                     .listRowInsets(EdgeInsets())
             }
         }
-    }
-}
-
-struct RecetteEnVedette: View {
-    var recettes: [Recette]
-    var body: some View {
-        recettes[0].image.resizable()
     }
 }
 
