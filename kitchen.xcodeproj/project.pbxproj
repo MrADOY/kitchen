@@ -15,6 +15,7 @@
 		E954826923756AE50030DCBB /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954826623756AE50030DCBB /* PieChartCell.swift */; };
 		E954826B23756BBB0030DCBB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954826A23756BBB0030DCBB /* Helpers.swift */; };
 		E954826E237577520030DCBB /* DataCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954826D237577510030DCBB /* DataCharts.swift */; };
+		E95F2CBD23CB8FD900D3F87D /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */; };
 		E96798D32374BCE00076C8AE /* makisushi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D02374BCE00076C8AE /* makisushi.jpg */; };
 		E96798D42374BCE00076C8AE /* welsh-rarebit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D12374BCE00076C8AE /* welsh-rarebit.jpg */; };
 		E96798D52374BCE00076C8AE /* riz-cantonais.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D22374BCE00076C8AE /* riz-cantonais.jpg */; };
@@ -35,7 +36,6 @@
 		E982558923722A9900E94770 /* boeuf-bourguinon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558623722A9800E94770 /* boeuf-bourguinon.jpg */; };
 		E982558A23722A9900E94770 /* steak-frites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558723722A9800E94770 /* steak-frites.jpg */; };
 		E982558C23722C0F00E94770 /* ListeRecette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982558B23722C0F00E94770 /* ListeRecette.swift */; };
-		E98A9024237556F500277BAF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A9023237556F500277BAF /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +64,7 @@
 		E954826623756AE50030DCBB /* PieChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
 		E954826A23756BBB0030DCBB /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		E954826D237577510030DCBB /* DataCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCharts.swift; sourceTree = "<group>"; };
+		E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
 		E96798D02374BCE00076C8AE /* makisushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = makisushi.jpg; sourceTree = "<group>"; };
 		E96798D12374BCE00076C8AE /* welsh-rarebit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "welsh-rarebit.jpg"; sourceTree = "<group>"; };
 		E96798D22374BCE00076C8AE /* riz-cantonais.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "riz-cantonais.jpg"; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		E982558623722A9800E94770 /* boeuf-bourguinon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boeuf-bourguinon.jpg"; sourceTree = "<group>"; };
 		E982558723722A9800E94770 /* steak-frites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steak-frites.jpg"; sourceTree = "<group>"; };
 		E982558B23722C0F00E94770 /* ListeRecette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeRecette.swift; sourceTree = "<group>"; };
-		E98A9023237556F500277BAF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +168,7 @@
 				E94EC39623736D4400F64D82 /* UserData.swift */,
 				E93A6398237464C5008270DD /* HomeCategorie.swift */,
 				E93A639A2374681D008270DD /* LigneCategorie.swift */,
-				E98A9023237556F500277BAF /* Home.swift */,
+				E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */,
 			);
 			path = kitchen;
 			sourceTree = "<group>";
@@ -367,9 +367,9 @@
 			files = (
 				E954826723756AE50030DCBB /* PieChartView.swift in Sources */,
 				E98255842372298E00E94770 /* LigneRecette.swift in Sources */,
+				E95F2CBD23CB8FD900D3F87D /* AVPlayerView.swift in Sources */,
 				E93A6399237464C5008270DD /* HomeCategorie.swift in Sources */,
 				E982554623720D1200E94770 /* RecetteDetail.swift in Sources */,
-				E98A9024237556F500277BAF /* Home.swift in Sources */,
 				E982558C23722C0F00E94770 /* ListeRecette.swift in Sources */,
 				E94EC39723736D4400F64D82 /* UserData.swift in Sources */,
 				E954826923756AE50030DCBB /* PieChartCell.swift in Sources */,

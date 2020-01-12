@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+
 struct RecetteDetail: View {
     
     @EnvironmentObject var userData: UserData
@@ -16,20 +17,21 @@ struct RecetteDetail: View {
     var recetteIndex: Int {
         userData.recettes.firstIndex(where: { $0.id == recette.id })!
     }
-    
+        
     var body: some View {
         
-        VStack(alignment: .leading){
+        VStack(){
+           
+
+    
             HStack(alignment: .top){
                 CircleImage(image : recette.image)
                     .offset(y: -130)
                 
-                
                 Text(recette.name)
                     .font(.headline)
                     
-                    
-                    
+            
                 Button(action: {
                     self.userData.recettes[self.recetteIndex].isFavorite.toggle()
                 }) {
@@ -43,16 +45,21 @@ struct RecetteDetail: View {
                     
                 }
                 
-            }.frame(height : 200)
+            }
             HStack{
             PieChartView(data : [
                 DataCharts(num :56, categorie: "Lipides", color: Color.red),
                 DataCharts(num :34, categorie: "Protéines", color: Color.blue),
                 DataCharts(num :128, categorie: "Glucides", color: Color.green)
             ], title: "Macronutriment", legend: "Legend")
+                VStack{
                 RecettesInstructions()
+                    NavigationLink(destination: AVPlayerView(videoURL : URL(string: "https://www.radiantmediaplayer.com/media/bbb-360p.mp4")!)) {
+                          Text("Video")
+                          }
+                }
             }
-        }.frame(width : 1920, height : 1920)
+    }
         
         
     }

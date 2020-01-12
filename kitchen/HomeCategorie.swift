@@ -35,23 +35,6 @@ struct HomeCategorie: View {
     }
 }
 
-struct TestRow: View {
-
-
-    @State private var backgroundColor = Color.clear
-
-    var body: some View {
-        Text("tOTO")
-        .focusable(true) { isFocused in
-            self.backgroundColor = isFocused ? Color.green : Color.blue
-            if isFocused {
-                print("TOTO")
-            }
-        }
-        .background(self.backgroundColor)
-    }
-}
-
 struct RecetteEnVedette: View {
     var recettes: [Recette]
     var body: some View {
