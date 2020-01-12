@@ -12,7 +12,8 @@ struct ContentView: View {
     let toPresent = UIHostingController(rootView: AnyView(EmptyView()))
     @State private var vURL = URL(string: "https://www.radiantmediaplayer.com/media/bbb-360p.mp4")
     var body: some View {
-        AVPlayerView(videoURL: self.vURL)
+        AVPlayerView(videoURL: self.vURL).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

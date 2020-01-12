@@ -54,7 +54,9 @@ struct RecetteDetail: View {
             ], title: "Macronutriment", legend: "Legend")
                 VStack{
                 RecettesInstructions()
-                    NavigationLink(destination: AVPlayerView(videoURL : URL(string: "https://www.radiantmediaplayer.com/media/bbb-360p.mp4")!)) {
+                    NavigationLink(destination: AVPlayerView(videoURL : URL(string: "https://www.radiantmediaplayer.com/media/bbb-360p.mp4")!)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                    .edgesIgnoringSafeArea(.all)) {
                           Text("Video")
                           }
                 }
