@@ -26,7 +26,7 @@ struct LoginView: View {
                  }
 
              }.sheet(isPresented: $isModal, content: {
-                 HomeCategorie()
+                 HomeCategorie().environmentObject(UserData())
              })
     }
 }

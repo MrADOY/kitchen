@@ -22,12 +22,6 @@ struct HomeCategorie: View {
     
     var body: some View {
         VStack{
-        Button("Déconnexion"){
-                self.keyChainService.delete(for: "access_token")
-                self.logoutButton = true
-        }.sheet(isPresented: $logoutButton, content: {
-                LoginView()
-        })
         NavigationView {
             List {
                 ForEach(categories.keys.sorted(), id: \.self) { key in

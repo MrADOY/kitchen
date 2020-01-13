@@ -42,6 +42,7 @@
 		E982558823722A9900E94770 /* carbonade-flamande.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558523722A9800E94770 /* carbonade-flamande.jpg */; };
 		E982558923722A9900E94770 /* boeuf-bourguinon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558623722A9800E94770 /* boeuf-bourguinon.jpg */; };
 		E982558A23722A9900E94770 /* steak-frites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558723722A9800E94770 /* steak-frites.jpg */; };
+		E9B30DFB23CCE57D00D45874 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B30DFA23CCE57D00D45874 /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		E982558523722A9800E94770 /* carbonade-flamande.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "carbonade-flamande.jpg"; sourceTree = "<group>"; };
 		E982558623722A9800E94770 /* boeuf-bourguinon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boeuf-bourguinon.jpg"; sourceTree = "<group>"; };
 		E982558723722A9800E94770 /* steak-frites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steak-frites.jpg"; sourceTree = "<group>"; };
+		E9B30DFA23CCE57D00D45874 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				E93A639A2374681D008270DD /* LigneCategorie.swift */,
 				E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */,
 				E95F2CD423CCBC8000D3F87D /* LoginView.swift */,
+				E9B30DFA23CCE57D00D45874 /* URLImage.swift */,
 			);
 			path = kitchen;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				E93A6399237464C5008270DD /* HomeCategorie.swift in Sources */,
 				E982554623720D1200E94770 /* RecetteDetail.swift in Sources */,
 				E94EC39723736D4400F64D82 /* UserData.swift in Sources */,
+				E9B30DFB23CCE57D00D45874 /* URLImage.swift in Sources */,
 				E95F2CD123CCB57F00D3F87D /* KeyChainService.swift in Sources */,
 				E954826923756AE50030DCBB /* PieChartCell.swift in Sources */,
 				E954826823756AE50030DCBB /* PieChartRow.swift in Sources */,
