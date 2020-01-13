@@ -29,7 +29,7 @@ struct HomeCategorie: View {
                 .listRowInsets(EdgeInsets())
                 
                 
-                LigneCategorie(nomCategorie: "Favori", items: self.userData.recetteDataJson.filter{ ($0.favorite ?? false)})
+                LigneCategorie(nomCategorie: "Favori", items: recetteDataJson.recettes.filter{ ($0.favorite)})
                     .listRowInsets(EdgeInsets())
             }
             }

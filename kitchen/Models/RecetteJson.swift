@@ -14,7 +14,7 @@ struct RecetteJson: Hashable, Codable, Identifiable {
     var name: String
     var portions: Int?
     var picture_url: String
-    var favorite : Bool?
+    var favorite : Bool
     var avis : Int?
     var time : Time
     var time_full: [TimeFull]
