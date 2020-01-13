@@ -44,7 +44,9 @@ struct RecetteDetail: View {
             
             HStack(alignment: .top){
                 VStack(alignment: .leading){
-                    RecettesIngredients()
+                           ForEach(0 ..< recette.ingredients.count){ Ingredient in
+                            Text(recette.ingredients[Ingredient].name)
+                           }
                 }
                 
                 Divider()
@@ -171,16 +173,11 @@ struct RecettesInstructions: View {
     }
 }
     
-struct RecettesIngredients: View {
-    
-    var body: some View {
-        VStack(spacing: 1.0){
-        Text("Ingredient 1 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        Text("Ingredient 2 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        Text("Ingredient 3 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        Text("Ingredient 4 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        }
-    }
-}
+//struct RecettesIngredients: View {
+//    @EnvironmentObject var userData: UserData
+//    var body: some View {
+//
+//}
+//    }
 
 }
