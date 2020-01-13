@@ -21,6 +21,8 @@
 		E95F2CC823CBC33400D3F87D /* RecetteJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F2CC723CBC33400D3F87D /* RecetteJson.swift */; };
 		E95F2CCB23CC655900D3F87D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E95F2CCA23CC655900D3F87D /* Kingfisher */; };
 		E95F2CCD23CC655900D3F87D /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E95F2CCC23CC655900D3F87D /* KingfisherSwiftUI */; };
+		E95F2CD123CCB57F00D3F87D /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F2CD023CCB57F00D3F87D /* KeyChainService.swift */; };
+		E95F2CD523CCBC8000D3F87D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F2CD423CCBC8000D3F87D /* LoginView.swift */; };
 		E96798D32374BCE00076C8AE /* makisushi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D02374BCE00076C8AE /* makisushi.jpg */; };
 		E96798D42374BCE00076C8AE /* welsh-rarebit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D12374BCE00076C8AE /* welsh-rarebit.jpg */; };
 		E96798D52374BCE00076C8AE /* riz-cantonais.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D22374BCE00076C8AE /* riz-cantonais.jpg */; };
@@ -72,6 +74,8 @@
 		E95F2CC123CBBD4000D3F87D /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		E95F2CC523CBC2B700D3F87D /* RecettesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecettesListModel.swift; sourceTree = "<group>"; };
 		E95F2CC723CBC33400D3F87D /* RecetteJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetteJson.swift; sourceTree = "<group>"; };
+		E95F2CD023CCB57F00D3F87D /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		E95F2CD423CCBC8000D3F87D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E96798D02374BCE00076C8AE /* makisushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = makisushi.jpg; sourceTree = "<group>"; };
 		E96798D12374BCE00076C8AE /* welsh-rarebit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "welsh-rarebit.jpg"; sourceTree = "<group>"; };
 		E96798D22374BCE00076C8AE /* riz-cantonais.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "riz-cantonais.jpg"; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				E95F2CC123CBBD4000D3F87D /* WebServices.swift */,
+				E95F2CD023CCB57F00D3F87D /* KeyChainService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				E93A6398237464C5008270DD /* HomeCategorie.swift */,
 				E93A639A2374681D008270DD /* LigneCategorie.swift */,
 				E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */,
+				E95F2CD423CCBC8000D3F87D /* LoginView.swift */,
 			);
 			path = kitchen;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				E93A6399237464C5008270DD /* HomeCategorie.swift in Sources */,
 				E982554623720D1200E94770 /* RecetteDetail.swift in Sources */,
 				E94EC39723736D4400F64D82 /* UserData.swift in Sources */,
+				E95F2CD123CCB57F00D3F87D /* KeyChainService.swift in Sources */,
 				E954826923756AE50030DCBB /* PieChartCell.swift in Sources */,
 				E954826823756AE50030DCBB /* PieChartRow.swift in Sources */,
 				E93A639B2374681D008270DD /* LigneCategorie.swift in Sources */,
@@ -403,6 +410,7 @@
 				E982557E2372236400E94770 /* Recette.swift in Sources */,
 				E95F2CC223CBBD4000D3F87D /* WebServices.swift in Sources */,
 				E954826E237577520030DCBB /* DataCharts.swift in Sources */,
+				E95F2CD523CCBC8000D3F87D /* LoginView.swift in Sources */,
 				E95F2CC623CBC2B700D3F87D /* RecettesListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
