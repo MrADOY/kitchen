@@ -42,7 +42,7 @@ struct TimeFull: Hashable, Codable {
     var recette_id: Int?
 }
 
-struct Ingredient: Hashable, Codable {
+struct Ingredient: Hashable, Codable, Identifiable{
     var id : Int?
     var name : String?
     var quantity: Int?

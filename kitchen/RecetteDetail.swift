@@ -24,7 +24,7 @@ struct RecetteDetail: View {
                     .offset(x: 0, y: -40)
                 
                 HStack(spacing: 3) {
-                    ForEach(0 ..< (recette.avis!)) { _ in
+                    ForEach(0 ..< (recette.avis ?? 0)) { _ in
                         Image(systemName: "star.fill")
                             .padding(.leading)
                             .imageScale(.medium)
@@ -33,9 +33,9 @@ struct RecetteDetail: View {
                 }
                 
                 Spacer()
-                
+
                 HStack(alignment: .center){
-                    
+
                     Text("Durée : 45min")
                     Text("Difficulté : ***")
                     Text("Coût : €€€")
@@ -44,18 +44,18 @@ struct RecetteDetail: View {
             
             HStack(alignment: .top){
                 VStack(alignment: .leading){
-                           ForEach(0 ..< recette.ingredients.count){ Ingredient in
-                            Text(recette.ingredients[Ingredient].name)
-                           }
+                    ForEach(self.recette.ingredients){ ingredient in
+                        Text("\(ingredient.name ?? "")")
+                    }
                 }
-                
+
                 Divider()
-                
+
                 VStack(alignment: .trailing){
                     RecettesInstructions()
                 }
             }
-            
+
             HStack(alignment: .bottom, spacing: 50){
                 
                 Button(action: {
