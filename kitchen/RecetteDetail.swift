@@ -11,21 +11,13 @@ import MapKit
 struct RecetteDetail: View {
     
     @EnvironmentObject var userData: UserData
-    var recette: Recette
+    var recette: RecetteJson
     
-    
-    var recetteIndex: Int {
-        userData.recettes.firstIndex(where: { $0.id == recette.id })!
-    }
-        
     var body: some View {
         
         VStack(){
-           
-
-    
             HStack(alignment: .top){
-                CircleImage(image : recette.image)
+                CircleImage(url : recette.picture_url)
                     .offset(y: -130)
                 
                 Text(recette.name)
@@ -33,9 +25,9 @@ struct RecetteDetail: View {
                     
             
                 Button(action: {
-                    self.userData.recettes[self.recetteIndex].isFavorite.toggle()
+                    self.userData.recettes[self.recette.id].isFavorite.toggle()
                 }) {
-                    if self.userData.recettes[self.recetteIndex].isFavorite {
+                    if self.userData.recettes[self.recette.id].isFavorite {
                         Image(systemName: "star.fill")
                             .foregroundColor(Color.yellow)
                     } else {
@@ -76,12 +68,5 @@ struct RecettesInstructions: View {
         Text("Etape 3 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
         Text("Etape 4 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
         }
-    }
-}
-
-struct RecetteDetail_Preview: PreviewProvider {
-    static var previews: some View {
-        RecetteDetail(recette : recetteData[0])
-            .environmentObject(UserData())
     }
 }

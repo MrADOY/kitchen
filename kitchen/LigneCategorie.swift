@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct LigneCategorie: View {
     var nomCategorie: String
-    var items: [Recette]    
+    var items: [RecetteJson]
     var body: some View {
         VStack(alignment: .leading) {
             Text(self.nomCategorie)
@@ -35,11 +36,11 @@ struct LigneCategorie: View {
 
 
 struct CategoryItem: View {
-    var recette: Recette
+    var recette: RecetteJson
     var body: some View {
         VStack(alignment: .center) {
             HStack(alignment: .center){
-                recette.image
+                KFImage(URL(string: recette.picture_url)!)
                 .resizable()
                 .frame(width: 155, height: 155)
                 
@@ -65,7 +66,7 @@ struct CategoryItem: View {
                     .font(.caption)
                     .fontWeight(.light)
                 HStack(spacing: -1.0) {
-                        ForEach(0 ..< recette.avis) { _ in
+                    ForEach(0 ..< (recette.avis ?? 0)) { _ in
                             Image(systemName: "star.fill")
                                 .imageScale(.small)
                                 .foregroundColor(.yellow)
@@ -76,15 +77,5 @@ struct CategoryItem: View {
         }
         .frame(width: 500, height: 190)
 
-    }
-}
-
-struct LigneCategorie_Previews: PreviewProvider {
-    static var previews: some View {
-      
-        LigneCategorie(
-            nomCategorie: recetteData[0].categorie.rawValue,
-            items: Array(recetteData.prefix(3))
-        )
     }
 }

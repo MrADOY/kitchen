@@ -10,15 +10,17 @@ import SwiftUI
 struct HomeCategorie: View {
         
     @EnvironmentObject var userData: UserData
+    @ObservedObject var recetteDataJson = RecettesListModel()
     
-    var categories: [String: [Recette]] {
+    var categories: [String: [RecetteJson]] {
         Dictionary(
-            grouping: recetteData,
-            by: { $0.categorie.rawValue }
+            grouping: self.recetteDataJson.recettes,
+            by: { $0.categories.rawValue }
         )
     }
     
     var body: some View {
+        VStack{
         NavigationView {
             List {
                 ForEach(categories.keys.sorted(), id: \.self) { key in
@@ -26,8 +28,10 @@ struct HomeCategorie: View {
                 }
                 .listRowInsets(EdgeInsets())
                 
-                LigneCategorie(nomCategorie: "Favori", items: self.userData.recettes.filter { $0.isFavorite})
+                
+                LigneCategorie(nomCategorie: "Favori", items: self.userData.recetteDataJson.filter{ ($0.favorite ?? false)})
                     .listRowInsets(EdgeInsets())
+            }
             }
         }
     }

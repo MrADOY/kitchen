@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		E954826B23756BBB0030DCBB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954826A23756BBB0030DCBB /* Helpers.swift */; };
 		E954826E237577520030DCBB /* DataCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954826D237577510030DCBB /* DataCharts.swift */; };
 		E95F2CBD23CB8FD900D3F87D /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */; };
+		E95F2CC223CBBD4000D3F87D /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F2CC123CBBD4000D3F87D /* WebServices.swift */; };
+		E95F2CC623CBC2B700D3F87D /* RecettesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F2CC523CBC2B700D3F87D /* RecettesListModel.swift */; };
+		E95F2CC823CBC33400D3F87D /* RecetteJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F2CC723CBC33400D3F87D /* RecetteJson.swift */; };
+		E95F2CCB23CC655900D3F87D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E95F2CCA23CC655900D3F87D /* Kingfisher */; };
+		E95F2CCD23CC655900D3F87D /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E95F2CCC23CC655900D3F87D /* KingfisherSwiftUI */; };
 		E96798D32374BCE00076C8AE /* makisushi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D02374BCE00076C8AE /* makisushi.jpg */; };
 		E96798D42374BCE00076C8AE /* welsh-rarebit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D12374BCE00076C8AE /* welsh-rarebit.jpg */; };
 		E96798D52374BCE00076C8AE /* riz-cantonais.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E96798D22374BCE00076C8AE /* riz-cantonais.jpg */; };
@@ -64,6 +69,9 @@
 		E954826A23756BBB0030DCBB /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		E954826D237577510030DCBB /* DataCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCharts.swift; sourceTree = "<group>"; };
 		E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
+		E95F2CC123CBBD4000D3F87D /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		E95F2CC523CBC2B700D3F87D /* RecettesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecettesListModel.swift; sourceTree = "<group>"; };
+		E95F2CC723CBC33400D3F87D /* RecetteJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetteJson.swift; sourceTree = "<group>"; };
 		E96798D02374BCE00076C8AE /* makisushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = makisushi.jpg; sourceTree = "<group>"; };
 		E96798D12374BCE00076C8AE /* welsh-rarebit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "welsh-rarebit.jpg"; sourceTree = "<group>"; };
 		E96798D22374BCE00076C8AE /* riz-cantonais.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "riz-cantonais.jpg"; sourceTree = "<group>"; };
@@ -96,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95F2CCD23CC655900D3F87D /* KingfisherSwiftUI in Frameworks */,
+				E95F2CCB23CC655900D3F87D /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +138,14 @@
 			path = Charts;
 			sourceTree = "<group>";
 		};
+		E95F2CC023CBBD2500D3F87D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E95F2CC123CBBD4000D3F87D /* WebServices.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		E982553723720D1200E94770 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +170,7 @@
 		E982554223720D1200E94770 /* kitchen */ = {
 			isa = PBXGroup;
 			children = (
+				E95F2CC023CBBD2500D3F87D /* Service */,
 				E954826C237576E20030DCBB /* Charts */,
 				E982557C2372234200E94770 /* Models */,
 				E982554323720D1200E94770 /* AppDelegate.swift */,
@@ -216,6 +235,8 @@
 			children = (
 				E982557D2372236400E94770 /* Recette.swift */,
 				E982557F2372262A00E94770 /* Data.swift */,
+				E95F2CC523CBC2B700D3F87D /* RecettesListModel.swift */,
+				E95F2CC723CBC33400D3F87D /* RecetteJson.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +258,8 @@
 			);
 			name = kitchen;
 			packageProductDependencies = (
+				E95F2CCA23CC655900D3F87D /* Kingfisher */,
+				E95F2CCC23CC655900D3F87D /* KingfisherSwiftUI */,
 			);
 			productName = kitchen;
 			productReference = E982554023720D1200E94770 /* kitchen.app */;
@@ -310,6 +333,7 @@
 			);
 			mainGroup = E982553723720D1200E94770;
 			packageReferences = (
+				E95F2CC923CC655900D3F87D /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = E982554123720D1200E94770 /* Products */;
 			projectDirPath = "";
@@ -364,6 +388,7 @@
 			files = (
 				E954826723756AE50030DCBB /* PieChartView.swift in Sources */,
 				E98255842372298E00E94770 /* LigneRecette.swift in Sources */,
+				E95F2CC823CBC33400D3F87D /* RecetteJson.swift in Sources */,
 				E95F2CBD23CB8FD900D3F87D /* AVPlayerView.swift in Sources */,
 				E93A6399237464C5008270DD /* HomeCategorie.swift in Sources */,
 				E982554623720D1200E94770 /* RecetteDetail.swift in Sources */,
@@ -376,7 +401,9 @@
 				E98255752372138B00E94770 /* CircleImage.swift in Sources */,
 				E954826B23756BBB0030DCBB /* Helpers.swift in Sources */,
 				E982557E2372236400E94770 /* Recette.swift in Sources */,
+				E95F2CC223CBBD4000D3F87D /* WebServices.swift in Sources */,
 				E954826E237577520030DCBB /* DataCharts.swift in Sources */,
+				E95F2CC623CBC2B700D3F87D /* RecettesListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +722,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E95F2CC923CC655900D3F87D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E95F2CCA23CC655900D3F87D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E95F2CC923CC655900D3F87D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		E95F2CCC23CC655900D3F87D /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E95F2CC923CC655900D3F87D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E982553823720D1200E94770 /* Project object */;
 }

@@ -11,4 +11,5 @@ import Combine
 final class UserData: ObservableObject  {
     @Published var showFavoritesOnly = false
     @Published var recettes = recetteData
+    @Published var recetteDataJson = RecettesListModel().recettes
 }
