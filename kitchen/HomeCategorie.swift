@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeCategorie: View {
-        
+        var keyChainService: KeyChainService = KeyChainService()
+    @State var logoutButton: Bool = false
     @EnvironmentObject var userData: UserData
     @ObservedObject var recetteDataJson = RecettesListModel()
     
@@ -21,14 +22,18 @@ struct HomeCategorie: View {
     
     var body: some View {
         VStack{
+        Button("Déconnexion"){
+                self.keyChainService.delete(for: "access_token")
+                self.logoutButton = true
+        }.sheet(isPresented: $logoutButton, content: {
+                LoginView()
+        })
         NavigationView {
             List {
                 ForEach(categories.keys.sorted(), id: \.self) { key in
                     LigneCategorie(nomCategorie: key, items: self.categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
-                
-                
                 LigneCategorie(nomCategorie: "Favori", items: recetteDataJson.recettes.filter{ ($0.favorite)})
                     .listRowInsets(EdgeInsets())
             }

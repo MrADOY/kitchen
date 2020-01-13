@@ -13,16 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var jwtToken: String = "";
+    
 
+    var keyChainService = KeyChainService();
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // Use a UIHostingController as window root view controller.
         let window = UIWindow(frame: UIScreen.main.bounds)
-
-        window.rootViewController = UIHostingController(
-            rootView: HomeCategorie()
-                .environmentObject(UserData())
-        )
+        
+        // on vérifie si le token est stocké dans la keychain, si oui, on affiche le contentView, sinon on affiche la page de login
+               if(getLoginFromSecureStorage()){
+                let view1 = HomeCategorie();
+                window.rootViewController = UIHostingController(rootView: view1.environmentObject(UserData()))
+               } else {
+                let view2 = LoginView()
+                window.rootViewController = UIHostingController(rootView: view2.environmentObject(UserData()))
+               }
         self.window = window
         window.makeKeyAndVisible()
         return true
@@ -31,6 +39,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication){
+         self.keyChainService.delete(for: "access_token")
+    }
+
+    private func getLoginFromSecureStorage() -> Bool {
+        if(keyChainService.retriveToken(for: "access_token") != nil) {
+            jwtToken = keyChainService.retriveToken(for: "access_token")!;
+            return true
+        }
+            return false
+        
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
