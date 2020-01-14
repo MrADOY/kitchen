@@ -13,6 +13,10 @@ struct RecetteDetail: View {
     @EnvironmentObject var userData: UserData
     var recette: RecetteJson
     
+    var recetteIndex: Int {
+        self.userData.recetteDataJson.firstIndex(where: { $0.id == recette.id })!
+    }
+    
     var body: some View {
         
         VStack(){
@@ -36,10 +40,20 @@ struct RecetteDetail: View {
 
                 HStack(alignment: .center){
 
-                    Text("Durée : 45min")
-                    Text("Difficulté : ***")
-                    Text("Coût : €€€")
-                }
+                    Text("Durée : \(String(recette.duration ?? 0))")
+                    HStack(alignment: .leading){
+                        Text("Difficulté : ")
+                        ForEach(0 ..< recette.difficulty ?? 0) { _ in
+                            Text("*")
+                        }
+                    }
+                    HStack(alignment: .leading){
+                        Text("Coût : ")
+                        ForEach(0 ..< (recette.budget ?? 0)) { _ in
+                            Text("€")
+                        }
+                    }
+               }
             }
             
             HStack(alignment: .top){
@@ -59,10 +73,12 @@ struct RecetteDetail: View {
             HStack(alignment: .bottom, spacing: 50){
                 
                 Button(action: {
-                self.userData.recettes[self.recette.id].isFavorite.toggle()
+                    WebService().postFavorite(idRecette: self.recette.id){_ in
+                        self.userData.recetteDataJson[self.recetteIndex].favorite.toggle()
+                    }
                     })
                 {
-                    if self.userData.recettes[self.recette.id].isFavorite {
+                    if self.userData.recetteDataJson[self.recetteIndex].favorite {
                         Image(systemName: "star.fill")
                             .foregroundColor(Color.yellow)
                     } else {
@@ -70,46 +86,6 @@ struct RecetteDetail: View {
                             .foregroundColor(Color.gray)
                     }
                 }
-                
-                Button(action: {
-                self.userData.recettes[self.recette.id].isFavorite.toggle()
-                    })
-                {
-                    if self.userData.recettes[self.recette.id].isFavorite {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(Color.yellow)
-                    } else {
-                        Image(systemName: "star")
-                            .foregroundColor(Color.gray)
-                    }
-                }
-                
-                Button(action: {
-                self.userData.recettes[self.recette.id].isFavorite.toggle()
-                    })
-                {
-                    if self.userData.recettes[self.recette.id].isFavorite {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(Color.yellow)
-                    } else {
-                        Image(systemName: "star")
-                            .foregroundColor(Color.gray)
-                    }
-                }
-                
-                Button(action: {
-                self.userData.recettes[self.recette.id].isFavorite.toggle()
-                    })
-                {
-                    if self.userData.recettes[self.recette.id].isFavorite {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(Color.yellow)
-                    } else {
-                        Image(systemName: "star")
-                            .foregroundColor(Color.gray)
-                    }
-                }
-                
                 Spacer()
                 
                     NavigationLink(destination: AVPlayerView(videoURL : URL(string: "https://www.radiantmediaplayer.com/media/bbb-360p.mp4")!)

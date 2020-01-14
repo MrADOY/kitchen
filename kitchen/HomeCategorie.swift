@@ -8,16 +8,27 @@
 import SwiftUI
 
 struct HomeCategorie: View {
-        var keyChainService: KeyChainService = KeyChainService()
-    @State var logoutButton: Bool = false
+
+    @State var showingProfile: Bool = false
+    
+    @State private var selected = 0
     @EnvironmentObject var userData: UserData
-    @ObservedObject var recetteDataJson = RecettesListModel()
     
     var categories: [String: [RecetteJson]] {
         Dictionary(
-            grouping: self.recetteDataJson.recettes,
+            grouping: self.userData.recetteDataJson,
             by: { $0.categories.rawValue }
         )
+    }
+    
+    
+    var profileButton: some View {
+        Button(action: { self.showingProfile.toggle() }) {
+            Image(systemName: "person.crop.circle")
+                .imageScale(.large)
+                .accessibility(label: Text("User Profile"))
+                .padding()
+        }
     }
     
     var body: some View {
@@ -28,8 +39,12 @@ struct HomeCategorie: View {
                     LigneCategorie(nomCategorie: key, items: self.categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
-                LigneCategorie(nomCategorie: "Favori", items: recetteDataJson.recettes.filter{ ($0.favorite)})
+                LigneCategorie(nomCategorie: "Favori", items: self.userData.recetteDataJson.filter{ ($0.favorite)})
                     .listRowInsets(EdgeInsets())
+            }.navigationBarTitle(Text("Recettes"))
+            .navigationBarItems(trailing: profileButton)
+            .sheet(isPresented: $showingProfile) {
+                ProfileHost()
             }
             }
         }

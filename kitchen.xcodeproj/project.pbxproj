@@ -35,13 +35,12 @@
 		E982556423720D1800E94770 /* kitchenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982556323720D1800E94770 /* kitchenUITests.swift */; };
 		E9825573237212D600E94770 /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9825572237212D600E94770 /* turtlerock.jpg */; };
 		E98255752372138B00E94770 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98255742372138B00E94770 /* CircleImage.swift */; };
-		E982557E2372236400E94770 /* Recette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557D2372236400E94770 /* Recette.swift */; };
-		E98255802372262A00E94770 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982557F2372262A00E94770 /* Data.swift */; };
 		E98255822372268C00E94770 /* recettes.json in Resources */ = {isa = PBXBuildFile; fileRef = E98255812372268C00E94770 /* recettes.json */; };
 		E98255842372298E00E94770 /* LigneRecette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98255832372298E00E94770 /* LigneRecette.swift */; };
 		E982558823722A9900E94770 /* carbonade-flamande.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558523722A9800E94770 /* carbonade-flamande.jpg */; };
 		E982558923722A9900E94770 /* boeuf-bourguinon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558623722A9800E94770 /* boeuf-bourguinon.jpg */; };
 		E982558A23722A9900E94770 /* steak-frites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558723722A9800E94770 /* steak-frites.jpg */; };
+		E99987DB23CD2E920084EAAB /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99987DA23CD2E920084EAAB /* ProfileHost.swift */; };
 		E9B30DFB23CCE57D00D45874 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B30DFA23CCE57D00D45874 /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,13 +94,12 @@
 		E982556523720D1800E94770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9825572237212D600E94770 /* turtlerock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = turtlerock.jpg; sourceTree = "<group>"; };
 		E98255742372138B00E94770 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
-		E982557D2372236400E94770 /* Recette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recette.swift; sourceTree = "<group>"; };
-		E982557F2372262A00E94770 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E98255812372268C00E94770 /* recettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recettes.json; sourceTree = "<group>"; };
 		E98255832372298E00E94770 /* LigneRecette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LigneRecette.swift; sourceTree = "<group>"; };
 		E982558523722A9800E94770 /* carbonade-flamande.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "carbonade-flamande.jpg"; sourceTree = "<group>"; };
 		E982558623722A9800E94770 /* boeuf-bourguinon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boeuf-bourguinon.jpg"; sourceTree = "<group>"; };
 		E982558723722A9800E94770 /* steak-frites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steak-frites.jpg"; sourceTree = "<group>"; };
+		E99987DA23CD2E920084EAAB /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		E9B30DFA23CCE57D00D45874 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +192,7 @@
 				E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */,
 				E95F2CD423CCBC8000D3F87D /* LoginView.swift */,
 				E9B30DFA23CCE57D00D45874 /* URLImage.swift */,
+				E99987DA23CD2E920084EAAB /* ProfileHost.swift */,
 			);
 			path = kitchen;
 			sourceTree = "<group>";
@@ -242,8 +241,6 @@
 		E982557C2372234200E94770 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E982557D2372236400E94770 /* Recette.swift */,
-				E982557F2372262A00E94770 /* Data.swift */,
 				E95F2CC523CBC2B700D3F87D /* RecettesListModel.swift */,
 				E95F2CC723CBC33400D3F87D /* RecetteJson.swift */,
 			);
@@ -407,15 +404,14 @@
 				E954826923756AE50030DCBB /* PieChartCell.swift in Sources */,
 				E954826823756AE50030DCBB /* PieChartRow.swift in Sources */,
 				E93A639B2374681D008270DD /* LigneCategorie.swift in Sources */,
-				E98255802372262A00E94770 /* Data.swift in Sources */,
 				E982554423720D1200E94770 /* AppDelegate.swift in Sources */,
 				E98255752372138B00E94770 /* CircleImage.swift in Sources */,
 				E954826B23756BBB0030DCBB /* Helpers.swift in Sources */,
-				E982557E2372236400E94770 /* Recette.swift in Sources */,
 				E95F2CC223CBBD4000D3F87D /* WebServices.swift in Sources */,
 				E954826E237577520030DCBB /* DataCharts.swift in Sources */,
 				E95F2CD523CCBC8000D3F87D /* LoginView.swift in Sources */,
 				E95F2CC623CBC2B700D3F87D /* RecettesListModel.swift in Sources */,
+				E99987DB23CD2E920084EAAB /* ProfileHost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

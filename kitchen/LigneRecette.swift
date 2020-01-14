@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct LigneRecette: View {
-    var recette: Recette
+    var recette: RecetteJson
     var body: some View {
         HStack {
-            recette.image
-            .resizable()
+            KFImage(URL(string: recette.picture_url)!) .resizable()
             .frame(width: 200, height: 150 )
             .overlay(
                 Rectangle().stroke(Color.white, lineWidth: 5))
@@ -21,21 +21,21 @@ struct LigneRecette: View {
             VStack {
                 HStack{
                     Text(recette.name)
-                    if recette.isFavorite {
+                    if recette.favorite {
                         Image(systemName: "star.fill")
                             .imageScale(.medium)
                             .foregroundColor(.yellow)
                     }
                 }
                 HStack{
-                    Text("Durée 20 min")
+                    Text("number: \(String(recette.duration ?? 0))")
                         .font(.caption)
                         .fontWeight(.light)
                     Text("Notes")
                         .font(.caption)
                         .fontWeight(.light)
                     HStack(spacing: -1.0) {
-                            ForEach(0 ..< recette.avis) { _ in
+                        ForEach(0 ..< (recette.avis ?? 0)) { _ in
                                 Image(systemName: "star.fill")
                                     .padding(.leading)
                                     .imageScale(.small)
@@ -47,13 +47,3 @@ struct LigneRecette: View {
             }
         }
     }
-struct LigneRecette_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        Group {
-        LigneRecette(recette : recetteData[0])
-        LigneRecette(recette : recetteData[1])
-        }
-
-    }
-}

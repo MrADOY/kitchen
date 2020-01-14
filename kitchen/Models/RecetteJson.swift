@@ -12,6 +12,9 @@ import KingfisherSwiftUI
 struct RecetteJson: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
+    var duration: Int?
+    var budget: Int?
+    var difficulty: Int?
     var portions: Int?
     var picture_url: String
     var favorite : Bool

@@ -9,7 +9,11 @@ import SwiftUI
 import Combine
 
 final class UserData: ObservableObject  {
+    init() {
+        WebService().getAllRecipes{
+           self.recetteDataJson = $0
+        }
+    }
     @Published var showFavoritesOnly = false
-    @Published var recettes = recetteData
-    @Published var recetteDataJson = RecettesListModel().recettes
+    @Published var recetteDataJson : [RecetteJson] = [];
 }

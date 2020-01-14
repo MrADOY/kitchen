@@ -26,7 +26,6 @@ final class RecettesListModel : ObservableObject {
     private func fetchRecipes() {
         WebService().getAllRecipes{
             self.recettes = $0
-            print("list: \(self.recettes[0].name)")
         }
     }
     
