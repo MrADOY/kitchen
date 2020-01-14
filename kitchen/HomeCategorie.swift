@@ -39,8 +39,15 @@ struct HomeCategorie: View {
                     LigneCategorie(nomCategorie: key, items: self.categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
-                LigneCategorie(nomCategorie: "Favori", items: self.userData.recetteDataJson.filter{ ($0.favorite)})
-                    .listRowInsets(EdgeInsets())
+                
+                if (self.userData.recetteDataJson.filter { (recette : RecetteJson) -> Bool in
+                    return recette.favorite
+                }.count) == 0 {
+                    EmptyView()
+                } else{
+                    LigneCategorie(nomCategorie: "Favoris", items: self.userData.recetteDataJson.filter{ ($0.favorite)})
+                        .listRowInsets(EdgeInsets())
+                }
             }.navigationBarTitle(Text("Recettes"))
             .navigationBarItems(trailing: profileButton)
             .sheet(isPresented: $showingProfile) {
