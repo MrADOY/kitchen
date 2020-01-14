@@ -57,22 +57,22 @@ struct RecetteDetail: View {
             }
             
             HStack(alignment: .top){
-                VStack(alignment: .leading){
+                VStack(alignment: .leading, spacing: 20){    //Ingredients
                     ForEach(self.recette.ingredients){ ingredient in
                         Text("\(ingredient.name ?? "")")
                             + Text(" : \(String(ingredient.quantity ?? 0)) ")
                                 + Text("\(ingredient.unit ?? "")")
                     }
-                }
+                }.background(Color.white.opacity(0.5).cornerRadius(20.0).padding(-30))
                 
                 Divider()
 
-                VStack(alignment: .leading){
+                VStack(alignment: .leading, spacing: 20){    //Instructions
                     ForEach(self.recette.steps){ step in
                         Text(" \(String(step.order ?? 0))- ")
                                + Text("\(step.action ?? "")")
                    }
-                }
+                }.background(Color.white.opacity(0.5).cornerRadius(20.0).padding(-30))
                 
                 Spacer()
             }
