@@ -75,7 +75,7 @@ struct CategoryItem: View {
 
         }
         .frame(width: 500, height: 190, alignment: .leading)
-        .background(URLImage(url: recette.picture_url)
+        .background(MenuImage(url: recette.picture_url)
         .edgesIgnoringSafeArea(.all).scaledToFill())
                 .cornerRadius(10.0)
     

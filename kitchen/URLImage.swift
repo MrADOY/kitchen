@@ -14,7 +14,7 @@ struct URLImage: View {
     var body: some View {
         KFImage(URL(string: url)!)
         .resizable()
-        .opacity(0.5)
+        .opacity(0.7)
     }
 }
 
