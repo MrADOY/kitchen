@@ -8,7 +8,7 @@
 import Foundation
 
 class WebService {
-static var server: String = "http://recettestnsi.ddns.net/api";
+static var server: String = "https://recettestnsi.ddns.net/api";
 
     func postLogin(email: String, password: String, completion: @escaping (Bool) -> ()){
         let keyChainService = KeyChainService()

@@ -7,8 +7,11 @@ struct SearchView: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<SearchView>) -> UINavigationController {
         let controller = UISearchController(searchResultsController: context.coordinator)
         controller.searchResultsUpdater = context.coordinator
+        controller.searchBar.becomeFirstResponder()
+        controller.hidesNavigationBarDuringPresentation = false
         return UINavigationController(rootViewController: UISearchContainerViewController(searchController: controller))
     }
+
 
     func updateUIViewController(_ uiViewController: UINavigationController, context: UIViewControllerRepresentableContext<SearchView>) {
     }
@@ -39,11 +42,10 @@ struct SearchView: UIViewControllerRepresentable {
 }
 
 struct CustomSearchBar: View {
-    @State var showingProfile: Bool = false
     @State private var text: String = ""
     @State var showSearch = true
     @EnvironmentObject var userData: UserData
-   
+    @State var showingProfile: Bool = false
     var body: some View {
         VStack {
             if showSearch {
@@ -58,12 +60,14 @@ struct CustomSearchBar: View {
                             return recette.name.lowercased().contains(text.lowercased())
                         }) { recette in
                             Button(action: { self.showingProfile.toggle() }) {
-                                Text(recette.name)
-                            }.sheet(isPresented: self.$showingProfile) {
-                                RecetteDetail(recette: recette).environmentObject(UserData())
+                                CategoryItem(recette: recette)
+                            }
+                            .background(URLImage(url: recette.picture_url))
+                            .buttonStyle(PlainButtonStyle())
+                            .sheet(isPresented: self.$showingProfile) {
+                                RecetteDetail(recette: recette).environmentObject(self.userData)
                             };
                         }
-                    .listRowInsets(EdgeInsets())
                     }
                 }
             } else {

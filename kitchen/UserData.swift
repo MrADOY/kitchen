@@ -12,7 +12,6 @@ final class UserData: ObservableObject  {
     init() {
         WebService().getAllRecipes{
            self.recetteDataJson = $0
-            print(self.recetteDataJson)
         }
     }
     @Published var showFavoritesOnly = false

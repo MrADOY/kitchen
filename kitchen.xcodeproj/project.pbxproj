@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C92E0DA23CDD134004884B8 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92E0D923CDD134004884B8 /* CustomSearchBar.swift */; };
 		0C92E0DC23CDEF46004884B8 /* login_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C92E0DB23CDEF46004884B8 /* login_background.jpg */; };
 		0C92E0DE23CDF560004884B8 /* LoginImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92E0DD23CDF560004884B8 /* LoginImage.swift */; };
 		E93A6399237464C5008270DD /* HomeCategorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A6398237464C5008270DD /* HomeCategorie.swift */; };
@@ -39,12 +38,10 @@
 		E9825573237212D600E94770 /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9825572237212D600E94770 /* turtlerock.jpg */; };
 		E98255752372138B00E94770 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98255742372138B00E94770 /* CircleImage.swift */; };
 		E98255822372268C00E94770 /* recettes.json in Resources */ = {isa = PBXBuildFile; fileRef = E98255812372268C00E94770 /* recettes.json */; };
-		E98255842372298E00E94770 /* LigneRecette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98255832372298E00E94770 /* LigneRecette.swift */; };
 		E982558823722A9900E94770 /* carbonade-flamande.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558523722A9800E94770 /* carbonade-flamande.jpg */; };
 		E982558923722A9900E94770 /* boeuf-bourguinon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558623722A9800E94770 /* boeuf-bourguinon.jpg */; };
 		E982558A23722A9900E94770 /* steak-frites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E982558723722A9800E94770 /* steak-frites.jpg */; };
 		E98C221D23CDEB6E00C4CDA8 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C221C23CDEB6E00C4CDA8 /* CustomSearchBar.swift */; };
-		E98C221F23CE191700C4CDA8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C221E23CE191700C4CDA8 /* TestView.swift */; };
 		E99987DB23CD2E920084EAAB /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99987DA23CD2E920084EAAB /* ProfileHost.swift */; };
 		E9B30DFB23CCE57D00D45874 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B30DFA23CCE57D00D45874 /* URLImage.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +63,7 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXFileReference section */		0C92E0D923CDD134004884B8 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+/* Begin PBXFileReference section */
 		0C92E0DB23CDEF46004884B8 /* login_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_background.jpg; sourceTree = "<group>"; };
 		0C92E0DD23CDF560004884B8 /* LoginImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImage.swift; sourceTree = "<group>"; };
 		E93A6398237464C5008270DD /* HomeCategorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategorie.swift; sourceTree = "<group>"; };
@@ -102,12 +99,10 @@
 		E9825572237212D600E94770 /* turtlerock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = turtlerock.jpg; sourceTree = "<group>"; };
 		E98255742372138B00E94770 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		E98255812372268C00E94770 /* recettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recettes.json; sourceTree = "<group>"; };
-		E98255832372298E00E94770 /* LigneRecette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LigneRecette.swift; sourceTree = "<group>"; };
 		E982558523722A9800E94770 /* carbonade-flamande.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "carbonade-flamande.jpg"; sourceTree = "<group>"; };
 		E982558623722A9800E94770 /* boeuf-bourguinon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boeuf-bourguinon.jpg"; sourceTree = "<group>"; };
 		E982558723722A9800E94770 /* steak-frites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steak-frites.jpg"; sourceTree = "<group>"; };
 		E98C221C23CDEB6E00C4CDA8 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
-		E98C221E23CE191700C4CDA8 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E99987DA23CD2E920084EAAB /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		E9B30DFA23CCE57D00D45874 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,7 +191,6 @@
 				E98255742372138B00E94770 /* CircleImage.swift */,
 				E93A639A2374681D008270DD /* LigneCategorie.swift */,
 				0C92E0DD23CDF560004884B8 /* LoginImage.swift */,
-				E98255832372298E00E94770 /* LigneRecette.swift */,
 				E94EC39623736D4400F64D82 /* UserData.swift */,
 				E93A6398237464C5008270DD /* HomeCategorie.swift */,
 				E95F2CBC23CB8FD900D3F87D /* AVPlayerView.swift */,
@@ -204,7 +198,6 @@
 				E9B30DFA23CCE57D00D45874 /* URLImage.swift */,
 				E99987DA23CD2E920084EAAB /* ProfileHost.swift */,
 				E98C221C23CDEB6E00C4CDA8 /* CustomSearchBar.swift */,
-				E98C221E23CE191700C4CDA8 /* TestView.swift */,
 			);
 			path = kitchen;
 			sourceTree = "<group>";
@@ -407,8 +400,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E954826723756AE50030DCBB /* PieChartView.swift in Sources */,
-				E98255842372298E00E94770 /* LigneRecette.swift in Sources */,
-				E98C221F23CE191700C4CDA8 /* TestView.swift in Sources */,
 				E95F2CC823CBC33400D3F87D /* RecetteJson.swift in Sources */,
 				0C92E0DE23CDF560004884B8 /* LoginImage.swift in Sources */,
 				E95F2CBD23CB8FD900D3F87D /* AVPlayerView.swift in Sources */,

@@ -11,7 +11,7 @@ struct HomeCategorie: View {
 
     @State var showingProfile: Bool = false
     @State var showingSearch: Bool = false
-    
+    var keyChainService: KeyChainService = KeyChainService()
     @State private var selected = 0
     @EnvironmentObject var userData: UserData
     
@@ -24,8 +24,9 @@ struct HomeCategorie: View {
     
     
     var profileButton: some View {
-        Button(action: { self.showingProfile.toggle() }) {
-            Image(systemName: "person.crop.circle")
+        Button(action: { self.keyChainService.delete(for: "access_token");
+            self.showingProfile.toggle() }) {
+            Image(systemName: "person.crop.circle.badge.xmark")
                 .imageScale(.large)
                 .accessibility(label: Text("User Profile"))
                 .padding()
@@ -60,11 +61,11 @@ struct HomeCategorie: View {
                 }
             }.navigationBarTitle(Text("Recettes"))
                 .navigationBarItems(trailing: HStack {
-                    profileButton.sheet(isPresented: $showingProfile) {
-                        ProfileHost()
-                    };
                     searchButton.sheet(isPresented: $showingSearch) {
-                        CustomSearchBar().environmentObject(UserData())
+                                           CustomSearchBar().environmentObject(self.userData)
+                    };
+                    profileButton.sheet(isPresented: $showingProfile) {
+                        LoginView()
                     };
                 })
           
