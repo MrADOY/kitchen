@@ -40,14 +40,14 @@ struct RecetteDetail: View {
 
                 HStack(alignment: .center){
 
-                    Text("Durée : \(String(recette.duration ?? 0))")
-                    HStack(alignment: .leading){
+                    Text("Durée : \(String(recette.duration ?? 0)) min")
+                    HStack(spacing : -1){
                         Text("Difficulté : ")
-                        ForEach(0 ..< recette.difficulty ?? 0) { _ in
+                        ForEach(0 ..< (recette.difficulty ?? 0)) { num in
                             Text("*")
                         }
                     }
-                    HStack(alignment: .leading){
+                    HStack(spacing : -1){
                         Text("Coût : ")
                         ForEach(0 ..< (recette.budget ?? 0)) { _ in
                             Text("€")
