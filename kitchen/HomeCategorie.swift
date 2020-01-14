@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeCategorie: View {
 
     @State var showingProfile: Bool = false
-    
+    @State var showingSearch: Bool = false
+    var keyChainService: KeyChainService = KeyChainService()
     @State private var selected = 0
     @EnvironmentObject var userData: UserData
     
@@ -23,13 +24,23 @@ struct HomeCategorie: View {
     
     
     var profileButton: some View {
-        Button(action: { self.showingProfile.toggle() }) {
-            Image(systemName: "person.crop.circle")
+        Button(action: { self.keyChainService.delete(for: "access_token");
+            self.showingProfile.toggle() }) {
+            Image(systemName: "person.crop.circle.badge.xmark")
                 .imageScale(.large)
                 .accessibility(label: Text("User Profile"))
                 .padding()
         }
     }
+    var searchButton: some View {
+        Button(action: { self.showingSearch.toggle() }) {
+            Image(systemName: "magnifyingglass")
+                .imageScale(.large)
+                .accessibility(label: Text("User Profile"))
+                .padding()
+        }
+    }
+    
     
     var body: some View {
         VStack{
@@ -49,10 +60,15 @@ struct HomeCategorie: View {
                         .listRowInsets(EdgeInsets())
                 }
             }.navigationBarTitle(Text("Recettes"))
-            .navigationBarItems(trailing: profileButton)
-            .sheet(isPresented: $showingProfile) {
-                ProfileHost()
-            }
+                .navigationBarItems(trailing: HStack {
+                    searchButton.sheet(isPresented: $showingSearch) {
+                                           CustomSearchBar().environmentObject(self.userData)
+                    };
+                    profileButton.sheet(isPresented: $showingProfile) {
+                        LoginView()
+                    };
+                })
+          
             }
         }
     }

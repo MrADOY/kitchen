@@ -16,4 +16,5 @@ final class UserData: ObservableObject  {
     }
     @Published var showFavoritesOnly = false
     @Published var recetteDataJson : [RecetteJson] = [];
+    @Published var text : String = "";
 }

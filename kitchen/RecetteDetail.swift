@@ -14,7 +14,7 @@ struct RecetteDetail: View {
     var recette: RecetteJson
     
     var recetteIndex: Int {
-        self.userData.recetteDataJson.firstIndex(where: { $0.id == recette.id })!
+        return self.userData.recetteDataJson.firstIndex(where: { $0.id == recette.id })!
     }
     
     var body: some View {
@@ -144,7 +144,8 @@ struct RecetteDetail: View {
 //
 //            }
             Spacer()
-        }
+        }.navigationBarHidden(true)
+        
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(URLImage(url: recette.picture_url)
         .edgesIgnoringSafeArea(.all))   //NE PAS TOUCHER CES 3 LIGNES
