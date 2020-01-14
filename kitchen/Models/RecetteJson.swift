@@ -70,7 +70,7 @@ struct NutritionFull: Hashable, Codable {
     var recette_id : Int?
 }
 
-struct Etape: Hashable, Codable {
+struct Etape: Hashable, Codable, Identifiable{
     var id : Int?
     var order : Int?
     var action : String?

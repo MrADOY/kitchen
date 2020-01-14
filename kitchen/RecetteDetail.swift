@@ -60,14 +60,21 @@ struct RecetteDetail: View {
                 VStack(alignment: .leading){
                     ForEach(self.recette.ingredients){ ingredient in
                         Text("\(ingredient.name ?? "")")
+                            + Text(" : \(String(ingredient.quantity ?? 0)) ")
+                                + Text("\(ingredient.unit ?? "")")
                     }
                 }
-
+                
                 Divider()
 
-                VStack(alignment: .trailing){
-                    RecettesInstructions()
+                VStack(alignment: .leading){
+                    ForEach(self.recette.steps){ step in
+                        Text(" \(String(step.order ?? 0))- ")
+                               + Text("\(step.action ?? "")")
+                   }
                 }
+                
+                Spacer()
             }
 
             HStack(alignment: .bottom, spacing: 50){
