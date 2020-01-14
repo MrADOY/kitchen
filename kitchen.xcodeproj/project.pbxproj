@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C92E0DA23CDD134004884B8 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92E0D923CDD134004884B8 /* CustomSearchBar.swift */; };
 		E93A6399237464C5008270DD /* HomeCategorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A6398237464C5008270DD /* HomeCategorie.swift */; };
 		E93A639B2374681D008270DD /* LigneCategorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A639A2374681D008270DD /* LigneCategorie.swift */; };
 		E94EC39723736D4400F64D82 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94EC39623736D4400F64D82 /* UserData.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C92E0D923CDD134004884B8 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		E93A6398237464C5008270DD /* HomeCategorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategorie.swift; sourceTree = "<group>"; };
 		E93A639A2374681D008270DD /* LigneCategorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LigneCategorie.swift; sourceTree = "<group>"; };
 		E94EC39623736D4400F64D82 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				E95F2CC523CBC2B700D3F87D /* RecettesListModel.swift */,
 				E95F2CC723CBC33400D3F87D /* RecetteJson.swift */,
+				0C92E0D923CDD134004884B8 /* CustomSearchBar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				E93A639B2374681D008270DD /* LigneCategorie.swift in Sources */,
 				E982554423720D1200E94770 /* AppDelegate.swift in Sources */,
 				E98255752372138B00E94770 /* CircleImage.swift in Sources */,
+				0C92E0DA23CDD134004884B8 /* CustomSearchBar.swift in Sources */,
 				E954826B23756BBB0030DCBB /* Helpers.swift in Sources */,
 				E95F2CC223CBBD4000D3F87D /* WebServices.swift in Sources */,
 				E954826E237577520030DCBB /* DataCharts.swift in Sources */,

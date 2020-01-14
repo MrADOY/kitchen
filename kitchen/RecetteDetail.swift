@@ -53,11 +53,14 @@ struct RecetteDetail: View {
                             Text("€")
                         }
                     }
-               }
+               }.background(Color.white.opacity(0.5).cornerRadius(20.0).padding(-10))
+
             }
             
             HStack(alignment: .top){
                 VStack(alignment: .leading, spacing: 20){    //Ingredients
+                    Text("\(String(recette.portions ?? 0)) personnes").bold()
+                    Divider().frame(width: 250)
                     ForEach(self.recette.ingredients){ ingredient in
                         Text("\(ingredient.name ?? "")")
                             + Text(" : \(String(ingredient.quantity ?? 0)) ")
@@ -67,7 +70,7 @@ struct RecetteDetail: View {
                 
                 Divider()
 
-                VStack(alignment: .leading, spacing: 20){    //Instructions
+                VStack(alignment: .leading, spacing: 30){    //Instructions
                     ForEach(self.recette.steps){ step in
                         Text(" \(String(step.order ?? 0))- ")
                                + Text("\(step.action ?? "")")
