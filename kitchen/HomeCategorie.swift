@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeCategorie: View {
 
     @State var showingProfile: Bool = false
+    @State var showingSearch: Bool = false
     
     @State private var selected = 0
     @EnvironmentObject var userData: UserData
@@ -30,6 +31,15 @@ struct HomeCategorie: View {
                 .padding()
         }
     }
+    var searchButton: some View {
+        Button(action: { self.showingSearch.toggle() }) {
+            Image(systemName: "magnifyingglass")
+                .imageScale(.large)
+                .accessibility(label: Text("User Profile"))
+                .padding()
+        }
+    }
+    
     
     var body: some View {
         VStack{
@@ -49,10 +59,15 @@ struct HomeCategorie: View {
                         .listRowInsets(EdgeInsets())
                 }
             }.navigationBarTitle(Text("Recettes"))
-            .navigationBarItems(trailing: profileButton)
-            .sheet(isPresented: $showingProfile) {
-                ProfileHost()
-            }
+                .navigationBarItems(trailing: HStack {
+                    profileButton.sheet(isPresented: $showingProfile) {
+                        ProfileHost()
+                    };
+                    searchButton.sheet(isPresented: $showingSearch) {
+                        CustomSearchBar().environmentObject(UserData())
+                    };
+                })
+          
             }
         }
     }
