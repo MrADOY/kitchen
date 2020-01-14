@@ -14,22 +14,26 @@ struct LoginView: View {
         @State var message: String = ""
     var body: some View {
         VStack {
-          TextField("Email", text: self.$email)
-          SecureField("Password", text: self.$password)
-               Text("\(self.message)").foregroundColor(Color.red)
-            Button("Connexion"){
-                 WebService().postLogin(email: self.email,password: self.password) {
-                     self.isModal = $0
-                     if !self.isModal {
-                         self.message = "Email ou mot de passe incorrect"
+            VStack(alignment: .center) {
+                TextField("Email", text: self.$email)
+                    .textFieldStyle(PlainTextFieldStyle())
+              SecureField("Password", text: self.$password)
+                   Text("\(self.message)").foregroundColor(Color.red)
+                Button("Connexion"){
+                     WebService().postLogin(email: self.email,password: self.password) {
+                         self.isModal = $0
+                         if !self.isModal {
+                             self.message = "Email ou mot de passe incorrect"
+                         }
                      }
-                 }
-
-             }.sheet(isPresented: $isModal, content: {
-                 HomeCategorie().environmentObject(UserData())
-             })
+                 }.sheet(isPresented: $isModal, content: {
+                     HomeCategorie().environmentObject(UserData())
+                 })
+            }.frame(width: 600)
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .background(LoginImage(url: "http://recettestnsi.ddns.net/storage/login.jpg")
+            .edgesIgnoringSafeArea(.all))
     }
-}
 }
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
