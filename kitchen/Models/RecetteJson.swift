@@ -16,6 +16,7 @@ struct RecetteJson: Hashable, Codable, Identifiable {
     var budget: Int?
     var difficulty: Int?
     var portions: Int?
+    var video: String?
     var picture_url: String
     var favorite : Bool
     var avis : Int?
@@ -31,6 +32,9 @@ struct RecetteJson: Hashable, Codable, Identifiable {
 enum Category: String, CaseIterable, Codable, Hashable {
     case tendances = "Tendances"
     case populaires = "Populaires"
+    case entress = "Entrées"
+    case plats = "Plats"
+    case desserts = "Desserts"
 }
 
 struct Time: Hashable, Codable {

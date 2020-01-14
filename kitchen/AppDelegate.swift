@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window.rootViewController = UIHostingController(rootView: view1.environmentObject(UserData()))
                } else {
                 let view2 = LoginView()
-                window.rootViewController = UIHostingController(rootView: view2.environmentObject(UserData()))
+                window.rootViewController = UIHostingController(rootView: view2)
                }
         self.window = window
         window.makeKeyAndVisible()
@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func getLoginFromSecureStorage() -> Bool {
         if(keyChainService.retriveToken(for: "access_token") != nil) {
             jwtToken = keyChainService.retriveToken(for: "access_token")!;
+            print(jwtToken)
             return true
         }
             return false

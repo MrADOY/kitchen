@@ -95,11 +95,15 @@ struct RecetteDetail: View {
                 }
                 Spacer()
                 
-                    NavigationLink(destination: AVPlayerView(videoURL : URL(string: "https://www.radiantmediaplayer.com/media/bbb-360p.mp4")!)
+                if recette.video != nil{
+                    NavigationLink(destination: AVPlayerView(videoURL : URL(string: recette.video ?? "")!)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                         .edgesIgnoringSafeArea(.all)) {
                             Text("Voir la recette en vidéo")
                     }
+                } else {
+                    EmptyView()
+                }
             }
             
                         
@@ -155,12 +159,4 @@ struct RecettesInstructions: View {
         }
     }
 }
-    
-//struct RecettesIngredients: View {
-//    @EnvironmentObject var userData: UserData
-//    var body: some View {
-//
-//}
-//    }
-
 }
