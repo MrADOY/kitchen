@@ -17,6 +17,7 @@ struct LoginView: View {
             VStack(alignment: .center) {
                 TextField("Email", text: self.$email)
                     .textFieldStyle(PlainTextFieldStyle())
+                    .buttonStyle(PlainButtonStyle())
               SecureField("Password", text: self.$password)
                    Text("\(self.message)").foregroundColor(Color.red)
                 Button("Connexion"){

@@ -403,7 +403,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E954826723756AE50030DCBB /* PieChartView.swift in Sources */,
-				E98255842372298E00E94770 /* LigneRecette.swift in Sources */,
 				0C92E0E223CE5CB2004884B8 /* MenuImage.swift in Sources */,
 				E95F2CC823CBC33400D3F87D /* RecetteJson.swift in Sources */,
 				0C92E0DE23CDF560004884B8 /* LoginImage.swift in Sources */,
@@ -591,14 +590,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"kitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = S4TW5ZFND9;
+				DEVELOPMENT_TEAM = 32U93G45S6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = kitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Istv.kitchen.test;
+				PRODUCT_BUNDLE_IDENTIFIER = Istv.kitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -611,14 +610,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"kitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = S4TW5ZFND9;
+				DEVELOPMENT_TEAM = 32U93G45S6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = kitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Istv.kitchen.test;
+				PRODUCT_BUNDLE_IDENTIFIER = Istv.kitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;

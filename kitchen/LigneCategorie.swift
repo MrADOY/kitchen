@@ -28,7 +28,7 @@ struct LigneCategorie: View {
                             CategoryItem(recette: recette)
                         }.buttonStyle(PlainButtonStyle())
                     }
-                }.padding(15)
+                }.padding(25)
             }
         }
     }
@@ -47,7 +47,7 @@ struct CategoryItem: View {
                         .padding(.leading, 20)
 
 
-                    HStack(spacing: 4) {
+                    HStack(spacing: 6) {
                        Image(systemName: "clock")
                            .imageScale(.small)
                        Text("\(String(recette.duration ?? 0)) min")

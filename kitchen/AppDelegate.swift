@@ -52,7 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
             return false
-        
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
