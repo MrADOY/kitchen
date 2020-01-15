@@ -53,7 +53,7 @@ struct RecetteDetail: View {
                             Text("€")
                         }
                     }
-               }.background(Color.white.opacity(0.5).cornerRadius(20.0).padding(-10))
+               }.background(Color.white.opacity(0.4).cornerRadius(20.0).padding(-10))
 
             }
             
@@ -75,7 +75,7 @@ struct RecetteDetail: View {
                         Text(" \(String(step.order ?? 0))- ")
                                + Text("\(step.action ?? "")")
                    }
-                }.background(Color.white.opacity(0.5).cornerRadius(20.0).padding(-30))
+                }.background(Color.white.opacity(0.4).cornerRadius(20.0).padding(-30))
                 
                 Spacer()
             }
@@ -147,20 +147,8 @@ struct RecetteDetail: View {
         }.navigationBarHidden(true)
         
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(URLImage(url: recette.picture_url)
+            .background(URLImage(url: recette.picture_url).opacity(0.8)
         .edgesIgnoringSafeArea(.all))   //NE PAS TOUCHER CES 3 LIGNES
     }
 
-
-struct RecettesInstructions: View {
-    
-    var body: some View {
-        VStack(spacing: 1.0){
-        Text("Etape 1 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        Text("Etape 2 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        Text("Etape 3 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        Text("Etape 4 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        }
-    }
-}
 }
